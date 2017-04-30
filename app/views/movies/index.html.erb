@@ -1,0 +1,56 @@
+<style>
+
+.head{
+  text-align: center;
+  background-color: grey;
+  padding: 0px;
+  margin: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: rgb(242, 242, 242, 0.4)}
+tr:nth-child(odd){background-color: rgb(84, 178, 255, 0.4)}
+</style>
+<div class="head">
+  <h1>MOVIE LISTS</h1>
+</div>
+<%= link_to 'CREATE MOVIE', new_movie_path %>
+
+</br></br>
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>MOVIE NAME</th>
+      <th>ROUND</th>
+      <th>TIME</th>
+      <th>DURATION</th>
+      <th colspan="3">OPERATION</th>
+    </tr>
+
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.movName %></td>
+        <td><%= movie.movRound %></td>
+        <td><%= movie.movTime %></td>
+        <td><%= movie.movDura %></td>
+        <td><%= link_to 'RESERVE', movie_path(movie) %></td>
+        <td><%= link_to 'EDIT', edit_movie_path(movie) %></td>
+        <td><%= link_to 'DELETE', movie_path(movie),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

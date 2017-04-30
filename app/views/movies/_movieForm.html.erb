@@ -1,0 +1,29 @@
+<%= form_for @movie do |m| %>
+  <p>
+    <%= m.label :'MOVIE NAME' %><br>
+    <%= m.text_field :movName %>
+  </p>
+
+  <p>
+    <%= m.label :'MOVIE ROUND' %><br>
+    <%= m.select :movRound, [['10:30','10:30'],['13:00','13:00'],['16:30','16:30'],
+                              ['19:00','19:00'],['21:30','21:30']] %>
+  </p>
+
+  <p>
+    <%= m.label:'MOVIE TIME' %><br>
+    <%= m.select :movTime, [['10:30-12:30','10:30-12:30'],['13:00-15:00','13:00-15:00'],
+                                ['16:30-18:30','16:30-18:30'], ['19:00-21:00','19:00-21:00'],
+                                ['21:30-23:30','21:30-23:30']] %>
+  </p>
+
+  <p>
+    <%= m.label :'MOVIE DURATION' %><br>
+    <%= m.text_field :movDura %> <span>Hours</span>
+  </p>
+
+  <p>
+    <%= m.submit %>
+  </p>
+
+<% end %>

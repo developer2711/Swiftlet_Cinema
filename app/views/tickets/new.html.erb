@@ -1,0 +1,163 @@
+<style>
+  td{
+    text-align: center;
+  }
+
+  .header{
+    height: 70px;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 5px #888888;
+    text-align: center;
+  }
+
+  .container{
+    background-color: grey;
+    max-width: 1300px;
+    margin: 40px auto 0 auto;
+    line-height: 1.65;
+    padding: 20px 50px;
+    display: flex;
+  }
+
+  .left{
+    background-color: grey;
+    flex: 1;
+    order: 1;
+  }
+
+  .center{
+    background-color: #FFFFFF;
+    text-align: right;
+    flex: 1;
+    order: 2;
+  }
+
+  .right{
+    background-color: grey;
+    flex: 1;
+    order: 3;
+  }
+
+</style>
+
+<div class="header">
+  <h1>PICK UP YOUR SEAT</h1>
+</div>
+
+<br><br>
+MOVIE: <strong><%= @movie.movName %></strong>
+ROUND: <strong><%= @movie.movRound %></strong>
+<br><br>
+<div class="container">
+
+  <div class="left"></div>
+
+  <div class="center">
+  <%= form_for :ticket, url: movie_tickets_path do |t| %>
+
+    <table align="center">
+        <!-- screen -->
+        <h2 style="text-align: center;">SCREEN</h2>
+        <tr>
+          <td>G</td>
+          <td><input type="checkbox" name="ticket[]" value="G1" id="G1"></td>
+          <td><input type="checkbox" name="ticket[]" value="G2" id="G2"></td>
+          <td><input type="checkbox" name="ticket[]" value="G3" id="G3"></td>
+          <td><input type="checkbox" name="ticket[]" value="G4" id="G4"></td>
+          <td><input type="checkbox" name="ticket[]" value="G5" id="G5"></td>
+          <td><input type="checkbox" name="ticket[]" value="G6" id="G6"></td>
+          <td><input type="checkbox" name="ticket[]" value="G7" id="G7"></td>
+          <td><input type="checkbox" name="ticket[]" value="G8" id="G8"></td>
+        </tr>
+
+        <tr>
+          <td>F</td>
+          <td><input type="checkbox" name="ticket[]" value="F1" id="F1"></td>
+          <td><input type="checkbox" name="ticket[]" value="F2" id="F2"></td>
+          <td><input type="checkbox" name="ticket[]" value="F3" id="F3"></td>
+          <td><input type="checkbox" name="ticket[]" value="F4" id="F4"></td>
+          <td><input type="checkbox" name="ticket[]" value="F5" id="F5"></td>
+          <td><input type="checkbox" name="ticket[]" value="F6" id="F6"></td>
+          <td><input type="checkbox" name="ticket[]" value="F7" id="F7"></td>
+          <td><input type="checkbox" name="ticket[]" value="F8" id="F8"></td>
+        </tr>
+
+        <tr>
+          <td>E</td>
+          <td><input type="checkbox" name="ticket[]" value="E1" id="E1"></td>
+          <td><input type="checkbox" name="ticket[]" value="E2" id="E2"></td>
+          <td><input type="checkbox" name="ticket[]" value="E3" id="E3"></td>
+          <td><input type="checkbox" name="ticket[]" value="E4" id="E4"></td>
+          <td><input type="checkbox" name="ticket[]" value="E5" id="E5"></td>
+          <td><input type="checkbox" name="ticket[]" value="E6" id="E6"></td>
+          <td><input type="checkbox" name="ticket[]" value="E7" id="E7"></td>
+          <td><input type="checkbox" name="ticket[]" value="E8" id="E8"></td>
+        </tr>
+
+        <tr>
+          <td>D</td>
+          <td><input type="checkbox" name="ticket[]" value="D1" id="D1"></td>
+          <td><input type="checkbox" name="ticket[]" value="D2" id="D2"></td>
+          <td><input type="checkbox" name="ticket[]" value="D3" id="D3"></td>
+          <td><input type="checkbox" name="ticket[]" value="D4" id="D4"></td>
+          <td><input type="checkbox" name="ticket[]" value="D5" id="D5"></td>
+          <td><input type="checkbox" name="ticket[]" value="D6" id="D6"></td>
+          <td><input type="checkbox" name="ticket[]" value="D7" id="D7"></td>
+          <td><input type="checkbox" name="ticket[]" value="D8" id="D8"></td>
+        </tr>
+
+        <tr>
+          <td>C</td>
+          <td><input type="checkbox" name="ticket[]" value="C1" id="C1"></td>
+          <td><input type="checkbox" name="ticket[]" value="C2" id="C2"></td>
+          <td><input type="checkbox" name="ticket[]" value="C3" id="C3"></td>
+          <td><input type="checkbox" name="ticket[]" value="C4" id="C4"></td>
+          <td><input type="checkbox" name="ticket[]" value="C5" id="C5"></td>
+          <td><input type="checkbox" name="ticket[]" value="C6" id="C6"></td>
+          <td><input type="checkbox" name="ticket[]" value="C7" id="C7"></td>
+          <td><input type="checkbox" name="ticket[]" value="C8" id="C8"></td>
+        </tr>
+
+        <tr>
+          <td>B</td>
+          <td><input type="checkbox" name="ticket[]" value="B1" id="B1"></td>
+          <td><input type="checkbox" name="ticket[]" value="B2" id="B2"></td>
+          <td><input type="checkbox" name="ticket[]" value="B3" id="B3"></td>
+          <td><input type="checkbox" name="ticket[]" value="B4" id="B4"></td>
+          <td><input type="checkbox" name="ticket[]" value="B5" id="B5"></td>
+          <td><input type="checkbox" name="ticket[]" value="B6" id="B6"></td>
+          <td><input type="checkbox" name="ticket[]" value="B7" id="B7"></td>
+          <td><input type="checkbox" name="ticket[]" value="B8" id="B8"></td>
+        </tr>
+
+        <tr>
+          <td>A</td>
+          <td><input type="checkbox" name="ticket[]" value="A1" id="A1"></td>
+          <td><input type="checkbox" name="ticket[]" value="A2" id="A2"></td>
+          <td><input type="checkbox" name="ticket[]" value="A3" id="A3"></td>
+          <td><input type="checkbox" name="ticket[]" value="A4" id="A4"></td>
+          <td><input type="checkbox" name="ticket[]" value="A5" id="A5"></td>
+          <td><input type="checkbox" name="ticket[]" value="A6" id="A6"></td>
+          <td><input type="checkbox" name="ticket[]" value="A7" id="A7"></td>
+          <td><input type="checkbox" name="ticket[]" value="A8" id="A8"></td>
+        </tr>
+
+          <!-- COL -->
+        <tr>
+          <td> </td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+    </table>
+    <%= t.submit %>
+  <% end %>
+  </div>
+
+  <div class="right"></div>
+</div>

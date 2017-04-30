@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tickID: MyString
+  tickRound: MyString
+  tickMov: MyString
+  tickDate: MyString
+  tickSeat: MyString
+  tickPrice: MyString
+  movie: one
+
+two:
+  tickID: MyString
+  tickRound: MyString
+  tickMov: MyString
+  tickDate: MyString
+  tickSeat: MyString
+  tickPrice: MyString
+  movie: two

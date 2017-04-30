@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movID: MyString
+  movName: MyString
+  movRound: MyString
+  movTime: MyString
+  movDura: MyString
+
+two:
+  movID: MyString
+  movName: MyString
+  movRound: MyString
+  movTime: MyString
+  movDura: MyString

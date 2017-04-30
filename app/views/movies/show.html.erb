@@ -1,0 +1,52 @@
+<style>
+.head{
+  text-align: center;
+  background-color: grey;
+  padding: 0px;
+  margin: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+
+<div class="head">
+  <h1>DETAIL</h1>
+</div>
+
+
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>MOVIE NAME:</th>
+      <th>MOVIE ROUND:</th>
+      <th>MOVIE TIME:</th>
+      <th>MOVIE DURATION:</th>
+    </tr>
+    <tr>
+      <td><%= @movie.movName %></td>
+      <td><%= @movie.movRound %></td>
+      <td><%= @movie.movTime %></td>
+      <td><%= @movie.movDura %></td>
+    </tr>
+
+    </tr>
+  </table>
+</div>
+
+<div style="text-align:right;">
+  <%= link_to 'Reserve', new_movie_ticket_path(@movie) %> |
+  <%= link_to 'Back', movies_path %>
+</div>
