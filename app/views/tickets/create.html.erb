@@ -1,3 +1,20 @@
+<style>
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+</style>
+
 <strong>RESULT:</strong><br><br>
 MOVIE: <span><%= @movie.movName %></span><br><br>
 ROUND: <span><%= @movie.movRound %></span><br><br>
@@ -9,7 +26,37 @@ PRICE: <span id="totalPrice"> </span><br><br>
   <input type="text" name="Money" id="Money" size="7" placeholder="0.00">
 <br><br>
 
-Change: <span id="Change"> </span><br><br>
+Change:<span id="Change"> </span>
+<br><br>
+ <table>
+   <tr>
+     <th>BANK 1000</th>
+     <th>BANK 500</th>
+     <th>BANK 100</th>
+     <th>BANK 50</th>
+     <th>BANK 20</th>
+     <th>coin 10</th>
+     <th>coin 5</th>
+     <th>coin 2</th>
+     <th>coin 1</th>
+     <th>coin 0.5</th>
+     <th>coin 0.25</th>
+   </tr>
+
+   <tr>
+     <td><span id="bank1000"> </span></td>
+     <td><span id="bank500"> </span></td>
+     <td><span id="bank100"> </span></td>
+     <td><span id="bank50"> </span></td>
+     <td><span id="bank20"> </span></td>
+     <td><span id="coin10"> </span></td>
+     <td><span id="coin5"> </span></td>
+     <td><span id="coin2"> </span></td>
+     <td><span id="coin1"> </span></td>
+     <td><span id="coin0.5"> </span></td>
+     <td><span id="coin0.25"> </span></td>
+   </tr>
+ </table>
 
 <button onclick="changeMon()">BUY</button>
 <br><br>
@@ -79,5 +126,16 @@ function changeMon(){
       }
   }
   document.getElementById("Change").innerHTML = change;
+  document.getElementById("bank1000").innerHTML = a[0];
+  document.getElementById("bank500").innerHTML = a[1];
+  document.getElementById("bank100").innerHTML = a[2];
+  document.getElementById("bank50").innerHTML = a[3];
+  document.getElementById("bank20").innerHTML = a[4];
+  document.getElementById("coin10").innerHTML = a[5];
+  document.getElementById("coin5").innerHTML = a[6];
+  document.getElementById("coin2").innerHTML = a[7];
+  document.getElementById("coin1").innerHTML = a[8];
+  document.getElementById("coin0.5").innerHTML = a[9];
+  document.getElementById("coin0.25").innerHTML = a[10];
 }
 </script>
